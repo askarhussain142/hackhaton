@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Leave | HCM Lite</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <h2>HCM Lite</h2>
+            <p class="sidebar-label">EMPLOYEE PANEL</p>
+
+            <a href="employee.html">Dashboard</a>
+            <a href="apply-leave.html" class="active">Apply for Leave</a>
+            <a href="payslip.html">My Payslip</a>
+
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+                <div>
+                    <h1>Apply for Leave</h1>
+                    <p>Submit and track your leave requests.</p>
+                </div>
+            </header>
+
+            <section class="content-card">
+
+                <h2>New Leave Request</h2>
+
+                <form id="leaveForm">
+
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="endDate">End Date</label>
+                        <input type="date" id="endDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">Reason for Leave</label>
+                        <textarea
+                            id="reason"
+                            rows="4"
+                            placeholder="Enter your reason..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <p id="daysPreview">Working days: 0</p>
+
+                    <button type="submit" class="primary-btn">
+                        Submit Request
+                    </button>
+
+                    <p id="formMessage" class="message"></p>
+
+                </form>
+
+            </section>
+
+            <section class="content-card">
+
+                <h2>My Leave Requests</h2>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Days</th>
+                                <th>Reason</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="myLeavesTable"></tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/apply-leave.js"></script>
+
+</body>
+
+</html>

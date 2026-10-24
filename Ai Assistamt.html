@@ -1,0 +1,84 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCM Lite - AI Assistant</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <h2>HCM Lite</h2>
+
+            <a href="admin.html">Dashboard</a>
+            <a href="employees.html">Employees</a>
+            <a href="leaves.html">Leave Requests</a>
+            <a href="settings.html">Settings</a>
+            <a href="payslip.html">Payslips</a>
+            <a href="Ai Assistamt.html" class="active">AI Assistant</a>
+        </aside>
+
+        <main class="main-content">
+
+            <div class="topbar">
+                <div>
+                    <h1>AI Assistant</h1>
+                    <p>Ask questions and get assistance.</p>
+                </div>
+
+                <button class="logout-button" id="newChat">
+                    New Chat
+                </button>
+            </div>
+
+            <section class="ai-chat-section">
+
+                <div class="ai-chat-header">
+                    <h2>🤖 HCM AI Assistant</h2>
+                    <p>Your personal AI helper</p>
+                </div>
+
+                <div class="ai-chat-messages" id="chatMessages">
+                    <div class="ai-message bot">
+                        Assalam-o-Alaikum! 👋
+                        Main HCM AI Assistant hoon.
+                        Aap mujhse koi bhi sawaal pooch sakte hain.
+                    </div>
+                </div>
+
+                <form class="ai-chat-form" id="chatForm">
+                    <input
+                        type="text"
+                        id="userMessage"
+                        placeholder="Ask me anything..."
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="sendButton">
+                        Send
+                    </button>
+                </form>
+
+                <p class="ai-chat-note">
+                    AI ke jawab ghalat bhi ho sakte hain.
+                    Zaroori maloomat verify karein.
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/ai-chat.js"></script>
+
+</body>
+</html>
+```

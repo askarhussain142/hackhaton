@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCM Lite - Employees</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <h2>HCM Lite</h2>
+
+            <a href="admin.html">Dashboard</a>
+            <a href="employees.html" class="active">Employees</a>
+            <a href="leaves.html">Leave Requests</a>
+            <a href="settings.html">Settings</a>
+            <a href="payslip.html">Payslips</a>
+        </aside>
+
+        <main class="main-content">
+
+            <div class="topbar">
+                <div>
+                    <h1>Employee Management</h1>
+                    <p>Add and manage your employees.</p>
+                </div>
+
+                <button class="logout-button" id="logout-button">
+                    Logout
+                </button>
+            </div>
+
+            <!-- Add Employee Form -->
+
+            <div class="section-box">
+                <h2>Add New Employee</h2>
+
+                <form id="employee-form">
+
+                    <input type="hidden" id="employee-id">
+
+                    <input
+                        type="text"
+                        id="employee-name"
+                        placeholder="Full Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="employee-email"
+                        placeholder="Email Address"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        id="employee-password"
+                        placeholder="Login Password"
+                    >
+
+                    <input
+                        type="text"
+                        id="employee-department"
+                        placeholder="Department"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="employee-salary"
+                        placeholder="Monthly Salary"
+                        min="1"
+                        step="0.01"
+                        required
+                    >
+
+                    <button type="submit" id="save-button">
+                        Add Employee
+                    </button>
+
+                    <p id="form-message"></p>
+
+                </form>
+            </div>
+
+            <!-- Search Employees -->
+
+            <div class="section-box">
+                <h2>Employee List</h2>
+
+                <input
+                    type="text"
+                    id="search-employee"
+                    placeholder="Search by name or email..."
+                >
+
+                <p>Total Employees: <strong id="total-employees">0</strong></p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Salary</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="employee-table"></tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/employees.js"></script>
+
+</body>
+</html>

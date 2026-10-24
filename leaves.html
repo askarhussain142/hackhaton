@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management | HCM Lite</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <h2>HCM Lite</h2>
+            <p class="sidebar-label">ADMIN PANEL</p>
+
+            <a href="admin.html">Dashboard</a>
+            <a href="employees.html">Employees</a>
+            <a href="leaves.html" class="active">Leave Management</a>
+
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+                <div>
+                    <h1>Leave Management</h1>
+                    <p>Manage employee leave requests</p>
+                </div>
+            </header>
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <p>Pending Requests</p>
+                    <h2 id="pendingCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Approved Requests</p>
+                    <h2 id="approvedCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Rejected Requests</p>
+                    <h2 id="rejectedCount">0</h2>
+                </div>
+
+            </section>
+
+            <section class="content-card">
+
+                <h2>All Leave Requests</h2>
+
+                <div class="form-group">
+                    <label for="statusFilter">Filter by Status</label>
+
+                    <select id="statusFilter">
+                        <option value="All">All Requests</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Employee</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Days</th>
+                                <th>Reason</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="leavesTable"></tbody>
+                    </table>
+                </div>
+
+                <p id="leaveMessage" class="message"></p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/leave.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Settings | HCM Lite</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <h2>HCM Lite</h2>
+            <p class="sidebar-label">ADMIN PANEL</p>
+
+            <a href="admin.html">Dashboard</a>
+            <a href="employees.html">Employees</a>
+            <a href="leaves.html">Leave Management</a>
+            <a href="settings.html" class="active">Settings</a>
+
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+                <div>
+                    <h1>Company Settings</h1>
+                    <p>Manage your company's attendance and leave rules.</p>
+                </div>
+            </header>
+
+            <section class="content-card">
+
+                <h2>General Settings</h2>
+
+                <form id="settingsForm">
+
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input
+                            type="text"
+                            id="companyName"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="officeStart">Office Start Time</label>
+                        <input
+                            type="time"
+                            id="officeStart"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="graceMinutes">Grace Minutes</label>
+                        <input
+                            type="number"
+                            id="graceMinutes"
+                            min="0"
+                            max="180"
+                            required
+                        >
+                        <small>
+                            Example: Office starts at 09:00 and grace is
+                            15 minutes, so check-in after 09:15 is late.
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="leaveQuota">Annual Leave Quota</label>
+                        <input
+                            type="number"
+                            id="leaveQuota"
+                            min="0"
+                            max="365"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Working Days</label>
+
+                        <div class="working-days">
+                            <label>
+                                <input type="checkbox" name="workingDays" value="1">
+                                Monday
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="workingDays" value="2">
+                                Tuesday
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="workingDays" value="3">
+                                Wednesday
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="workingDays" value="4">
+                                Thursday
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="workingDays" value="5">
+                                Friday
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="workingDays" value="6">
+                                Saturday
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="workingDays" value="0">
+                                Sunday
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Save Settings
+                    </button>
+
+                    <p id="settingsMessage" class="message"></p>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/settings.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCM Lite - Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <h2>HCM Lite</h2>
+
+            <a href="admin.html" class="active">Dashboard</a>
+            <a href="employees.html">Employees</a>
+            <a href="leaves.html">Leave Requests</a>
+            <a href="settings.html">Settings</a>
+            <a href="payslip.html">Payslips</a>
+            <a href="Ai Assistamt.html">Ai Assistant</a>
+            
+        </aside>
+
+        <main class="main-content">
+
+            <div class="topbar">
+                <div>
+                    <h1 id="welcome">Admin Dashboard</h1>
+                    <p id="company-name"></p>
+                </div>
+
+                <button class="logout-button" id="logout-button">
+                    Logout
+                </button>
+            </div>
+
+            <h2>Today's Attendance</h2>
+
+            <div class="stats-container">
+
+                <div class="stat-card present">
+                    <h3>Present</h3>
+                    <p id="present-count">0</p>
+                </div>
+
+                <div class="stat-card absent">
+                    <h3>Absent</h3>
+                    <p id="absent-count">0</p>
+                </div>
+
+                <div class="stat-card leave">
+                    <h3>On Leave</h3>
+                    <p id="leave-count">0</p>
+                </div>
+
+                <div class="stat-card late">
+                    <h3>Late</h3>
+                    <p id="late-count">0</p>
+                </div>
+
+            </div>
+
+            <div class="section-box">
+                <h2>Today's Attendance Details</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Check In</th>
+                            <th>Check Out</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="attendance-table">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-box">
+                <h2>Pending Leave Requests</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Leave Type</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="leave-table">
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

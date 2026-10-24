@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard | HCM Lite</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <h2>HCM Lite</h2>
+            <p class="sidebar-label">EMPLOYEE PANEL</p>
+
+            <a href="employee.html" class="active">Dashboard</a>
+            <a href="payslip.html">My Payslip</a>
+            <a href="employee.html">Dashboard</a>
+<a href="leaves.html">Apply for Leave</a>
+<a href="apply-leave.html">Apply for Leave</a>
+<a href="payslip.html">My Payslip</a>
+
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+                <div>
+                    <h1>Employee Dashboard</h1>
+                    <p id="welcomeText">Welcome!</p>
+                </div>
+
+                <div class="user-badge" id="employeeBadge">
+                    Employee
+                </div>
+            </header>
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <p>Present Days</p>
+                    <h2 id="presentCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Late Days</p>
+                    <h2 id="lateCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Half Days</p>
+                    <h2 id="halfDayCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Leave Requests</p>
+                    <h2 id="leaveCount">0</h2>
+                </div>
+
+            </section>
+
+            <section class="content-card">
+
+                <h2>Today's Attendance</h2>
+                <p id="todayDate"></p>
+
+                <div class="attendance-info">
+                    <div>
+                        <p>Check In</p>
+                        <h3 id="checkInTime">Not checked in</h3>
+                    </div>
+
+                    <div>
+                        <p>Check Out</p>
+                        <h3 id="checkOutTime">Not checked out</h3>
+                    </div>
+
+                    <div>
+                        <p>Status</p>
+                        <h3 id="todayStatus">Not Marked</h3>
+                    </div>
+                </div>
+
+                <div class="attendance-buttons">
+                    <button id="checkInBtn" class="primary-btn">
+                        Check In
+                    </button>
+
+                    <button id="checkOutBtn" class="secondary-btn">
+                        Check Out
+                    </button>
+                </div>
+
+                <p id="attendanceMessage" class="message"></p>
+
+            </section>
+
+            <section class="content-card">
+
+                <h2>My Attendance History</h2>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Check In</th>
+                                <th>Check Out</th>
+                                <th>Hours</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="attendanceTable">
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/attendance.js"></script>
+
+</body>
+
+</html>
